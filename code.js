@@ -1,7 +1,5 @@
-const { Data } = require("./lib.js");
+const fs = require('fs');
 
-console.log("hello");
+fs.renameSync("./a.txt", "./b.txt")
 
-var a = new Data();
-
-console.log("Your data is: " + a.a);
+//i AM GONNA WORK ON IT LATER
