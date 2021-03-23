@@ -1,18 +1,17 @@
-const fs = require('fs');
-fs.renameSync("./a.txt", "./b.txt")
-fs.rename("somem.txt");
-if(fs.existsSync("b.txt")){
-    console.log("It does Exist")
-}
-//i AM GONNA WORK ON IT LATER
+const express = require("express");
 
+const app = express();
+app.set("view-engine", "ejs");
 
+app.get("/", function(req, res){
+    res.render("index.ejs");
+})
 
+app.post("/submit", function(req, res){
+    res.send(req.body)
+})
 
-
-
-
-
+app.listen(3000);
 
 
 
