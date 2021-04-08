@@ -29,7 +29,9 @@ app.post("/login", (req, res) => {
     session.username = username;
 });
 
-
+app.get("/home", (req, res) => {
+    res.render("homepage/index.ejs");
+})
 
 app.post("/submit", (req, res) => {
     var sql = "SELECT * FROM users";
